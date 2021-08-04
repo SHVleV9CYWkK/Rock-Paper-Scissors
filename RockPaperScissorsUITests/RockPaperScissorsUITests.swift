@@ -1,13 +1,13 @@
 //
-//  Rock_Paper_ScissorsUITests.swift
-//  Rock Paper ScissorsUITests
+//  RockPaperScissorsUITests.swift
+//  RockPaperScissorsUITests
 //
-//  Created by Huey Bai on 3/8/21.
+//  Created by Huey Bai on 4/8/21.
 //
 
 import XCTest
 
-class Rock_Paper_ScissorsUITests: XCTestCase {
+class RockPaperScissorsUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
