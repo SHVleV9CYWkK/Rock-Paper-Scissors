@@ -10,7 +10,19 @@ import RealityKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var arView: ARView!
+    @IBOutlet weak var arView: ARView!
+    
+    @IBAction func paperButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func scissorButton(_ sender: Any) {
+    
+    }
+    
+    @IBAction func Rock(_ sender: Any) {
+    
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
