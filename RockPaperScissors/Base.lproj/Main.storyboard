@@ -19,6 +19,10 @@
                             <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XzC-Gu-gLs">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wZv-XD-THZ" appends="YES" id="2hI-AQ-oJb"/>
+                                </connections>
                             </arView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiU-os-nQw">
                                 <rect key="frame" x="167" y="700" width="80" height="80"/>
@@ -26,16 +30,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="✋"/>
                                 <connections>
-                                    <action selector="paperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cV-uE-S4g"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk9-aW-YJ2">
-                                <rect key="frame" x="20" y="700" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="✌️"/>
-                                <connections>
-                                    <action selector="scissorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BKk-eu-fiB"/>
+                                    <action selector="paperButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cV-uE-S4g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hg-P1-Pog">
@@ -44,18 +39,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="✊"/>
                                 <connections>
-                                    <action selector="Rock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IOc-rr-goi"/>
+                                    <action selector="rockButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IOc-rr-goi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk9-aW-YJ2">
+                                <rect key="frame" x="20" y="700" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="✌️"/>
+                                <connections>
+                                    <action selector="scissorButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BKk-eu-fiB"/>
+                                </connections>
+                            </button>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNI-Dm-VT2" customClass="ARCoachingOverlayView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ltg-ai-fAq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="arView" destination="XzC-Gu-gLs" id="JUF-jo-0ej"/>
+                        <outlet property="coachingOverlay" destination="ZNI-Dm-VT2" id="sr2-AJ-954"/>
+                        <outlet property="paper" destination="eiU-os-nQw" id="zuA-mx-EC7"/>
+                        <outlet property="rock" destination="5hg-P1-Pog" id="1aY-BP-EDA"/>
+                        <outlet property="scissor" destination="Uk9-aW-YJ2" id="8yF-Gl-yKC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wZv-XD-THZ">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="003-VX-fCd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>

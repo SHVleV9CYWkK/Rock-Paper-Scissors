@@ -7,30 +7,76 @@
 
 import UIKit
 import RealityKit
+import ARKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
     
     @IBOutlet weak var arView: ARView!
     
-    @IBAction func paperButton(_ sender: Any) {
-        
-    }
+    @IBOutlet weak var scissor: UIButton!
     
-    @IBAction func scissorButton(_ sender: Any) {
+    @IBOutlet weak var paper: UIButton!
     
-    }
+    @IBOutlet weak var rock: UIButton!
     
-    @IBAction func Rock(_ sender: Any) {
+    @IBOutlet weak var coachingOverlay: ARCoachingOverlayView!
     
-    }
+    let box = try! Experience.loadBox();
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scissor.isHidden = true;
+        paper.isHidden = true;
+        rock.isHidden = true;
         
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+        let arConfiguration = ARWorldTrackingConfiguration()
+        arConfiguration.planeDetection = .horizontal
+        arView.session.run(arConfiguration)
+        presentCoachingOverlay()
+    }
+    
+    
+    
+    @IBAction func paperButtonAction(_ sender: Any) {
         
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+    }
+    
+    @IBAction func scissorButtonAction(_ sender: Any) {
+    
+    }
+    
+    @IBAction func rockButtonAction(_ sender: Any) {
+    
+    }
+    
+    @IBAction func onTap(_ sender: UITapGestureRecognizer) {
+        let tapLocation: CGPoint = sender.location(in: arView)
+        let estimatedPlane: ARRaycastQuery.Target = .estimatedPlane
+        let alignment: ARRaycastQuery.TargetAlignment = .horizontal
+                        
+        let result: [ARRaycastResult] = arView.raycast(from: tapLocation,
+                                                           allowing: estimatedPlane,
+                                                          alignment: alignment)
+                
+        guard let rayCast: ARRaycastResult = result.first
+        else { return }
+                
+        let anchor = AnchorEntity(world: rayCast.worldTransform)
+        anchor.addChild(box)
+        arView.scene.anchors.append(anchor)
+        print(rayCast)
+        
+        paper.isHidden = false;
+        rock.isHidden = false;
+        scissor.isHidden = false;
+    }
+    
+    
+    func presentCoachingOverlay() {
+        coachingOverlay.session = arView.session
+        coachingOverlay.delegate = self
+        coachingOverlay.goal = .horizontalPlane
+        coachingOverlay.activatesAutomatically = false
+        self.coachingOverlay.setActive(true, animated: true)
     }
 }
