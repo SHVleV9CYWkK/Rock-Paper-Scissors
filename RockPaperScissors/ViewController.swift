@@ -23,6 +23,9 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
     
     let box = try! Experience.loadBox();
     
+    let computer = Computer()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         scissor.isHidden = true;
@@ -38,15 +41,24 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
     
     
     @IBAction func paperButtonAction(_ sender: Any) {
-        
+        print("Player: Paper")
+        box.notifications.hide.post()
+        box.notifications.paperUser.post()
+        checkComputerDetermine()
     }
     
     @IBAction func scissorButtonAction(_ sender: Any) {
-    
+        print("Player: Scissor")
+        box.notifications.hide.post()
+        box.notifications.scissorsUser.post()
+        checkComputerDetermine()
     }
     
     @IBAction func rockButtonAction(_ sender: Any) {
-    
+        print("Player: Rock")
+        box.notifications.hide.post()
+        box.notifications.rockUser.post()
+        checkComputerDetermine()
     }
     
     @IBAction func onTap(_ sender: UITapGestureRecognizer) {
@@ -73,10 +85,25 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
     
     
     func presentCoachingOverlay() {
+        UIApplication.shared.isIdleTimerDisabled = true
         coachingOverlay.session = arView.session
         coachingOverlay.delegate = self
         coachingOverlay.goal = .horizontalPlane
-        coachingOverlay.activatesAutomatically = false
-        self.coachingOverlay.setActive(true, animated: true)
+    }
+    
+    func checkComputerDetermine(){
+        switch computer.selectOption() {
+        case 2:
+            box.notifications.paperCpu.post()
+            print("Computer: Paper")
+        case 1:
+            box.notifications.rockCpu.post()
+            print("Computer: Rock")
+        case 0:
+            box.notifications.scissorsCpu.post()
+            print("Computer: Scissor")
+        default: break
+        }
+        print("\n")
     }
 }
