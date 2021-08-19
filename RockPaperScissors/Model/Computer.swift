@@ -8,7 +8,18 @@
 import Foundation
 class Computer {
     
-    func selectOption() -> Int8 {
-        return Int8(arc4random_uniform(3))
+    func selectOption() -> gameGestures {
+        let random = Int8(arc4random_uniform(3))
+        var result:gameGestures = .Rock
+        switch random {
+        case 2:
+            result =  .Rock
+        case 1:
+            result = .Scissor
+        case 0:
+            result = .Paper
+        default: break;
+        }
+        return result
     }
 }

@@ -66,6 +66,7 @@
                         <outlet property="paper" destination="eiU-os-nQw" id="zuA-mx-EC7"/>
                         <outlet property="rock" destination="5hg-P1-Pog" id="1aY-BP-EDA"/>
                         <outlet property="scissor" destination="Uk9-aW-YJ2" id="8yF-Gl-yKC"/>
+                        <outlet property="tapGesture" destination="wZv-XD-THZ" id="fkf-vk-P6F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -17,20 +17,20 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
     
     @IBOutlet weak var paper: UIButton!
     
+    @IBOutlet var tapGesture: UITapGestureRecognizer!
+    
     @IBOutlet weak var rock: UIButton!
     
     @IBOutlet weak var coachingOverlay: ARCoachingOverlayView!
     
-    let box = try! Experience.loadBox();
+    private let box = try! Experience.loadBox();
     
-    let computer = Computer()
+    private let system = gameSystem()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scissor.isHidden = true;
-        paper.isHidden = true;
-        rock.isHidden = true;
+        
         
         let arConfiguration = ARWorldTrackingConfiguration()
         arConfiguration.planeDetection = .horizontal
@@ -78,9 +78,8 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         arView.scene.anchors.append(anchor)
         print(rayCast)
         
-        paper.isHidden = false;
-        rock.isHidden = false;
-        scissor.isHidden = false;
+        showChooseButton()
+        tapGesture.isEnabled = false
     }
     
     
@@ -92,18 +91,26 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
     }
     
     func checkComputerDetermine(){
-        switch computer.selectOption() {
-        case 2:
-            box.notifications.paperCpu.post()
-            print("Computer: Paper")
-        case 1:
-            box.notifications.rockCpu.post()
-            print("Computer: Rock")
-        case 0:
-            box.notifications.scissorsCpu.post()
-            print("Computer: Scissor")
-        default: break
+        let computChoose =  system.getComputerChoose()
+        switch computChoose {
+            case .Paper:
+                box.notifications.paperCpu.post()
+            case .Rock:
+                box.notifications.rockCpu.post()
+            case .Scissor:
+                box.notifications.scissorsCpu.post()
         }
-        print("\n")
+    }
+    
+    func hiddenChooseButton(){
+        scissor.isHidden = true;
+        paper.isHidden = true;
+        rock.isHidden = true;
+    }
+    
+    func showChooseButton(){
+        paper.isHidden = false
+        rock.isHidden = false
+        scissor.isHidden = false
     }
 }
