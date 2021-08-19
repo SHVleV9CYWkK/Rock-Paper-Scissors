@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C549E8626CDE4AB00E29B1A /* gameGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C549E8526CDE4AB00E29B1A /* gameGestures.swift */; };
-		4C549E8826CDEB6B00E29B1A /* gameSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C549E8726CDEB6B00E29B1A /* gameSystem.swift */; };
+		4C549E8626CDE4AB00E29B1A /* GameGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C549E8526CDE4AB00E29B1A /* GameGestures.swift */; };
+		4C549E8826CDEB6B00E29B1A /* GameSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C549E8726CDEB6B00E29B1A /* GameSystem.swift */; };
 		4C80F2F526BA14B6006480E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80F2F426BA14B6006480E2 /* AppDelegate.swift */; };
 		4C80F2F726BA14B6006480E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80F2F626BA14B6006480E2 /* ViewController.swift */; };
 		4C80F2F926BA14B6006480E2 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4C80F2F826BA14B6006480E2 /* Experience.rcproject */; };
@@ -38,8 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C549E8526CDE4AB00E29B1A /* gameGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameGestures.swift; sourceTree = "<group>"; };
-		4C549E8726CDEB6B00E29B1A /* gameSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameSystem.swift; sourceTree = "<group>"; };
+		4C549E8526CDE4AB00E29B1A /* GameGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGestures.swift; sourceTree = "<group>"; };
+		4C549E8726CDEB6B00E29B1A /* GameSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSystem.swift; sourceTree = "<group>"; };
 		4C80F2F126BA14B6006480E2 /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C80F2F426BA14B6006480E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C80F2F626BA14B6006480E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,8 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				4C8D7C2A26C3DF8B007B2645 /* Computer.swift */,
-				4C549E8526CDE4AB00E29B1A /* gameGestures.swift */,
-				4C549E8726CDEB6B00E29B1A /* gameSystem.swift */,
+				4C549E8526CDE4AB00E29B1A /* GameGestures.swift */,
+				4C549E8726CDEB6B00E29B1A /* GameSystem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,8 +276,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C8D7C2B26C3DF8B007B2645 /* Computer.swift in Sources */,
-				4C549E8626CDE4AB00E29B1A /* gameGestures.swift in Sources */,
-				4C549E8826CDEB6B00E29B1A /* gameSystem.swift in Sources */,
+				4C549E8626CDE4AB00E29B1A /* GameGestures.swift in Sources */,
+				4C549E8826CDEB6B00E29B1A /* GameSystem.swift in Sources */,
 				4C80F2F726BA14B6006480E2 /* ViewController.swift in Sources */,
 				4C80F2F526BA14B6006480E2 /* AppDelegate.swift in Sources */,
 				4C80F2F926BA14B6006480E2 /* Experience.rcproject in Sources */,

@@ -16,56 +16,113 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XzC-Gu-gLs">
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XzC-Gu-gLs">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="wZv-XD-THZ" appends="YES" id="2hI-AQ-oJb"/>
                                 </connections>
                             </arView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiU-os-nQw">
-                                <rect key="frame" x="167" y="700" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="✋"/>
-                                <connections>
-                                    <action selector="paperButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cV-uE-S4g"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hg-P1-Pog">
-                                <rect key="frame" x="314" y="700" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="✊"/>
-                                <connections>
-                                    <action selector="rockButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IOc-rr-goi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk9-aW-YJ2">
-                                <rect key="frame" x="20" y="700" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="✌️"/>
-                                <connections>
-                                    <action selector="scissorButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BKk-eu-fiB"/>
-                                </connections>
-                            </button>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNI-Dm-VT2" customClass="ARCoachingOverlayView">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="109" translatesAutoresizingMaskIntoConstraints="NO" id="l72-Fa-SZd">
+                                <rect key="frame" x="72" y="50" width="269.5" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEh-0R-hCh">
+                                        <rect key="frame" x="0.0" y="0.0" width="17" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6D9-lh-ZJt">
+                                        <rect key="frame" x="126" y="0.0" width="17.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zf-Ua-Ivh">
+                                        <rect key="frame" x="252.5" y="0.0" width="17" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please click on a plane to add a scene" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMx-By-XDa">
+                                <rect key="frame" x="63" y="115" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="106" translatesAutoresizingMaskIntoConstraints="NO" id="DYA-Fs-1ZU">
+                                <rect key="frame" x="20" y="678" width="374" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk9-aW-YJ2">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal" title="✌️"/>
+                                        <connections>
+                                            <action selector="scissorButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BKk-eu-fiB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hg-P1-Pog">
+                                        <rect key="frame" x="160" y="0.0" width="54" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal" title="✊"/>
+                                        <connections>
+                                            <action selector="rockButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IOc-rr-goi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiU-os-nQw">
+                                        <rect key="frame" x="320" y="0.0" width="54" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal" title="✋"/>
+                                        <connections>
+                                            <action selector="paperButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cV-uE-S4g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eiU-os-nQw" firstAttribute="leading" secondItem="5hg-P1-Pog" secondAttribute="trailing" constant="106" id="89j-Js-aJQ"/>
+                                    <constraint firstItem="5hg-P1-Pog" firstAttribute="leading" secondItem="Uk9-aW-YJ2" secondAttribute="trailing" constant="106" id="dm1-aX-BUG"/>
+                                </constraints>
+                            </stackView>
+                            <view opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNI-Dm-VT2" customClass="ARCoachingOverlayView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ltg-ai-fAq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ltg-ai-fAq" firstAttribute="bottom" secondItem="DYA-Fs-1ZU" secondAttribute="bottom" constant="112" id="0Eg-yl-lcU"/>
+                            <constraint firstItem="ltg-ai-fAq" firstAttribute="trailing" secondItem="VMx-By-XDa" secondAttribute="trailing" constant="63" id="3z5-6G-Krd"/>
+                            <constraint firstItem="VMx-By-XDa" firstAttribute="top" secondItem="l72-Fa-SZd" secondAttribute="bottom" constant="29" id="4ej-w0-QKe"/>
+                            <constraint firstAttribute="bottom" secondItem="ZNI-Dm-VT2" secondAttribute="bottom" id="8rE-jO-Pyj"/>
+                            <constraint firstItem="XzC-Gu-gLs" firstAttribute="top" secondItem="jRA-kb-KOX" secondAttribute="top" id="9iD-YQ-DCc"/>
+                            <constraint firstItem="ltg-ai-fAq" firstAttribute="trailing" secondItem="DYA-Fs-1ZU" secondAttribute="trailing" constant="20" id="9vZ-iR-ixd"/>
+                            <constraint firstItem="XzC-Gu-gLs" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" id="A9q-sh-NsK"/>
+                            <constraint firstItem="ZNI-Dm-VT2" firstAttribute="trailing" secondItem="ltg-ai-fAq" secondAttribute="trailing" id="Jyn-a1-GAb"/>
+                            <constraint firstItem="ltg-ai-fAq" firstAttribute="trailing" secondItem="l72-Fa-SZd" secondAttribute="trailing" constant="72.5" id="Qnh-VN-w0h"/>
+                            <constraint firstItem="l72-Fa-SZd" firstAttribute="top" secondItem="ltg-ai-fAq" secondAttribute="top" constant="6" id="XRd-zI-o7g"/>
+                            <constraint firstItem="VMx-By-XDa" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" constant="63" id="Y85-DB-GRa"/>
+                            <constraint firstItem="ZNI-Dm-VT2" firstAttribute="top" secondItem="jRA-kb-KOX" secondAttribute="top" id="bGf-34-xty"/>
+                            <constraint firstItem="l72-Fa-SZd" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" constant="72" id="g4y-jr-RaX"/>
+                            <constraint firstItem="ZNI-Dm-VT2" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" id="nuq-In-cL7"/>
+                            <constraint firstAttribute="bottom" secondItem="XzC-Gu-gLs" secondAttribute="bottom" id="pdn-by-6z1"/>
+                            <constraint firstItem="XzC-Gu-gLs" firstAttribute="trailing" secondItem="ltg-ai-fAq" secondAttribute="trailing" id="sCB-jC-0Jx"/>
+                            <constraint firstItem="DYA-Fs-1ZU" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" constant="20" id="sXn-dA-VLT"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="arView" destination="XzC-Gu-gLs" id="JUF-jo-0ej"/>
+                        <outlet property="chooseColumn" destination="DYA-Fs-1ZU" id="RdJ-H1-MOp"/>
                         <outlet property="coachingOverlay" destination="ZNI-Dm-VT2" id="sr2-AJ-954"/>
+                        <outlet property="computerScoreLable" destination="2Zf-Ua-Ivh" id="4pK-zc-udj"/>
                         <outlet property="paper" destination="eiU-os-nQw" id="zuA-mx-EC7"/>
+                        <outlet property="playerScoreLable" destination="PEh-0R-hCh" id="Eax-wS-ogI"/>
+                        <outlet property="promptInformation" destination="VMx-By-XDa" id="s80-32-4LT"/>
                         <outlet property="rock" destination="5hg-P1-Pog" id="1aY-BP-EDA"/>
                         <outlet property="scissor" destination="Uk9-aW-YJ2" id="8yF-Gl-yKC"/>
+                        <outlet property="scoreColumn" destination="l72-Fa-SZd" id="0kg-fa-xMG"/>
                         <outlet property="tapGesture" destination="wZv-XD-THZ" id="fkf-vk-P6F"/>
                     </connections>
                 </viewController>

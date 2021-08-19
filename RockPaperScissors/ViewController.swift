@@ -13,9 +13,19 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
     
     @IBOutlet weak var arView: ARView!
     
+    @IBOutlet weak var promptInformation: UILabel!
+    
+    @IBOutlet weak var chooseColumn: UIStackView!
+    
     @IBOutlet weak var scissor: UIButton!
     
     @IBOutlet weak var paper: UIButton!
+    
+    @IBOutlet weak var scoreColumn: UIStackView!
+    
+    @IBOutlet weak var playerScoreLable: UILabel!
+    
+    @IBOutlet weak var computerScoreLable: UILabel!
     
     @IBOutlet var tapGesture: UITapGestureRecognizer!
     
@@ -25,43 +35,50 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
     
     private let box = try! Experience.loadBox();
     
-    private let system = gameSystem()
+    private let system = GameSystem()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         let arConfiguration = ARWorldTrackingConfiguration()
         arConfiguration.planeDetection = .horizontal
         arView.session.run(arConfiguration)
         presentCoachingOverlay()
+        promptInformation.isHidden = false
     }
-    
-    
     
     @IBAction func paperButtonAction(_ sender: Any) {
         print("Player: Paper")
+        chooseColumn.isHidden = true
         box.notifications.hide.post()
         box.notifications.paperUser.post()
-        checkComputerDetermine()
+        box.actions.completeARound.onAction = actionCompleted(_:)
+        let computerChoose = checkComputerDetermine()
+        system.compare(playerChoose: .Paper, computerChoose: computerChoose)
     }
     
     @IBAction func scissorButtonAction(_ sender: Any) {
         print("Player: Scissor")
+        chooseColumn.isHidden = true
         box.notifications.hide.post()
         box.notifications.scissorsUser.post()
-        checkComputerDetermine()
+        box.actions.completeARound.onAction = actionCompleted(_:)
+        let computerChoose = checkComputerDetermine()
+        system.compare(playerChoose: .Scissor, computerChoose: computerChoose)
     }
     
     @IBAction func rockButtonAction(_ sender: Any) {
         print("Player: Rock")
+        chooseColumn.isHidden = true
         box.notifications.hide.post()
         box.notifications.rockUser.post()
-        checkComputerDetermine()
+        box.actions.completeARound.onAction = actionCompleted(_:)
+        let computerChoose = checkComputerDetermine()
+        system.compare(playerChoose: .Scissor, computerChoose: computerChoose)
     }
     
     @IBAction func onTap(_ sender: UITapGestureRecognizer) {
+        promptInformation.isHidden = true
         let tapLocation: CGPoint = sender.location(in: arView)
         let estimatedPlane: ARRaycastQuery.Target = .estimatedPlane
         let alignment: ARRaycastQuery.TargetAlignment = .horizontal
@@ -78,7 +95,9 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         arView.scene.anchors.append(anchor)
         print(rayCast)
         
-        showChooseButton()
+        chooseColumn.isHidden = false
+        scoreColumn.isHidden = false
+        box.notifications.showQuestionMark.post()
         tapGesture.isEnabled = false
     }
     
@@ -90,27 +109,41 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         coachingOverlay.goal = .horizontalPlane
     }
     
-    func checkComputerDetermine(){
+    func checkComputerDetermine() -> GameGestures{
         let computChoose =  system.getComputerChoose()
         switch computChoose {
             case .Paper:
+                print("Computer: Paper\n")
                 box.notifications.paperCpu.post()
             case .Rock:
+                print("Computer: Rock\n")
                 box.notifications.rockCpu.post()
             case .Scissor:
+                print("Computer: Scissor\n")
                 box.notifications.scissorsCpu.post()
+        }
+        return computChoose
+    }
+   
+    func updataScoreDisplay(){
+        playerScoreLable.text = String(system.playerScore)
+        computerScoreLable.text = String(system.computerScore)
+    }
+    
+    func prepareNextContent(){
+        updataScoreDisplay()
+        if system.haveWiner(){
+            if system.isPlayerWin(){
+                
+            }
+        }else{
+            chooseColumn.isHidden = false
         }
     }
     
-    func hiddenChooseButton(){
-        scissor.isHidden = true;
-        paper.isHidden = true;
-        rock.isHidden = true;
-    }
-    
-    func showChooseButton(){
-        paper.isHidden = false
-        rock.isHidden = false
-        scissor.isHidden = false
+    func actionCompleted(_ entity: Entity?) {
+        guard entity != nil else { return }
+        prepareNextContent()
+        print("执行了完毕")
     }
 }

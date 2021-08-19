@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum gameGestures {
+enum GameGestures {
     case Rock
     case Paper
     case Scissor

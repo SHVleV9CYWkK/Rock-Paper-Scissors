@@ -8,9 +8,9 @@
 import Foundation
 class Computer {
     
-    func selectOption() -> gameGestures {
+    func selectOption() -> GameGestures {
         let random = Int8(arc4random_uniform(3))
-        var result:gameGestures = .Rock
+        var result:GameGestures = .Rock
         switch random {
         case 2:
             result =  .Rock
