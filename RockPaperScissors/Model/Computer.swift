@@ -6,8 +6,7 @@
 //
 
 import Foundation
-class Computer {
-    
+struct Computer {
     func selectOption() -> GameGestures {
         let random = Int8(arc4random_uniform(3))
         var result:GameGestures = .Rock
