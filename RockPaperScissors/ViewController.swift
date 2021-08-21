@@ -21,9 +21,9 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
     
     @IBOutlet weak var paper: UIButton!
     
-    @IBOutlet weak var scoreColumn: UIStackView!
-    
     @IBOutlet weak var playerScoreLable: UILabel!
+    
+    @IBOutlet weak var delimiter: UILabel!
     
     @IBOutlet weak var computerScoreLable: UILabel!
     
@@ -40,6 +40,7 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        promptInformation.isHidden = true
         let arConfiguration = ARWorldTrackingConfiguration()
         arConfiguration.planeDetection = .horizontal
         arView.session.run(arConfiguration)
@@ -74,7 +75,7 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         box.notifications.rockUser.post()
         box.actions.completeARound.onAction = actionCompleted(_:)
         let computerChoose = checkComputerDetermine()
-        system.compare(playerChoose: .Scissor, computerChoose: computerChoose)
+        system.compare(playerChoose: .Rock, computerChoose: computerChoose)
     }
     
     @IBAction func onTap(_ sender: UITapGestureRecognizer) {
@@ -93,10 +94,14 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         let anchor = AnchorEntity(world: rayCast.worldTransform)
         anchor.addChild(box)
         arView.scene.anchors.append(anchor)
+        print("------------------")
         print(rayCast)
         
+        box.actions.completeARound.onAction = actionCompleted(_:)
         chooseColumn.isHidden = false
-        scoreColumn.isHidden = false
+        playerScoreLable.isHidden = false
+        delimiter.isHidden = false
+        computerScoreLable.isHidden = false
         box.notifications.showQuestionMark.post()
         tapGesture.isEnabled = false
     }
@@ -134,7 +139,7 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         updataScoreDisplay()
         if system.haveWiner(){
             if system.isPlayerWin(){
-                
+                box.notifications.playerWin.post()
             }
         }else{
             chooseColumn.isHidden = false
@@ -142,8 +147,9 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
     }
     
     func actionCompleted(_ entity: Entity?) {
-        guard entity != nil else { return }
         prepareNextContent()
         print("执行了完毕")
     }
+    
+    
 }
