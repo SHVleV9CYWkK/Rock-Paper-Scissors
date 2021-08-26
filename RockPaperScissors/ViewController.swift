@@ -74,7 +74,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onTap(_ sender: UITapGestureRecognizer) {
-        promptInformation.isHidden = true
         let tapLocation: CGPoint = sender.location(in: arView)
         let estimatedPlane: ARRaycastQuery.Target = .estimatedPlane
         let alignment: ARRaycastQuery.TargetAlignment = .horizontal
@@ -98,6 +97,7 @@ class ViewController: UIViewController {
         chooseColumn.isHidden = false
         scoreBar.isHidden = false
         tapGesture.isEnabled = false
+        promptInformation.isHidden = true
         box.actions.completeARound.onAction = prepareNextContent(_:)
         box.notifications.showQuestionMark.post()
     }
@@ -135,7 +135,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func hiddenPromptInformation() {
-        promptInformation.isHidden = true
+    func showPromptInformation() {
+        promptInformation.isHidden = false
     }
 }

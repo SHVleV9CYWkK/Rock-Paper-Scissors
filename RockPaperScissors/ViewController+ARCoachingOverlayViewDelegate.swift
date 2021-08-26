@@ -17,6 +17,6 @@ extension ViewController: ARCoachingOverlayViewDelegate {
     }
     
     func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
-        hiddenPromptInformation()
+        showPromptInformation()
     }
 }

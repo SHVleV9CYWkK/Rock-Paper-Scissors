@@ -123,42 +123,6 @@
                                     }
                                   ],
                                   "__version" : 1
-                                },
-                                {
-                                  "__content" : [
-                                    {
-                                      "configurationBox" : {
-                                        "configuration" : {
-                                          "angularCoefficient" : 1,
-                                          "animationStyle" : "wild",
-                                          "buildOutAnimationType" : "scale down",
-                                          "distance" : 1,
-                                          "duration" : 0,
-                                          "fadeOut" : true,
-                                          "linearCoefficient" : 1,
-                                          "moveEase" : "none",
-                                          "respectPhysics" : false,
-                                          "target" : [
-                                            "5AE1B7F7-5E75-46A9-90D4-F4079BCD4F97",
-                                            "597E3F59-3441-4F95-848B-15B6FB349820",
-                                            "B126AD77-E7F8-46D2-BA8F-6BB63268614D",
-                                            "C3150CF5-7606-4618-8933-F06087F9936F",
-                                            "F0E1D9E8-71C7-4257-8170-E93410D6DACA",
-                                            "3DE2F1AF-E4FF-48CE-B714-8FA220E52D0E",
-                                            "54BC4AB9-BA64-4973-98D4-49B22D5B4DCD",
-                                            "BE9995E3-039B-4BF1-8FBE-CCAD49E067DE",
-                                            "BF885F29-3AA8-4F11-8FEC-6A1B967A17DF"
-                                          ]
-                                        },
-                                        "name" : {
-                                          "type" : "hide"
-                                        }
-                                      },
-                                      "identifier" : "87D286E8-F9E3-402A-966F-ED56D85CF9C5",
-                                      "isEnabled" : true
-                                    }
-                                  ],
-                                  "__version" : 1
                                 }
                               ],
                               "identifier" : "82039C60-1AC8-4B2D-A2AF-8135C87863F7",
