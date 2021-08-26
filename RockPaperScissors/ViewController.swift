@@ -9,34 +9,33 @@ import UIKit
 import RealityKit
 import ARKit
 
-class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var arView: ARView!
     
-    @IBOutlet weak var promptInformation: UILabel!
+    @IBOutlet weak var playerScoreLable: UILabel!
+       
+    @IBOutlet weak var computerScoreLable: UILabel!
     
-    @IBOutlet weak var chooseColumn: UIStackView!
+    @IBOutlet weak var scoreBar: UIStackView!
+    
+    @IBOutlet weak var promptInformation: UILabel!
     
     @IBOutlet weak var scissor: UIButton!
     
+    @IBOutlet weak var rock: UIButton!
+    
     @IBOutlet weak var paper: UIButton!
     
-    @IBOutlet weak var playerScoreLable: UILabel!
-    
-    @IBOutlet weak var delimiter: UILabel!
-    
-    @IBOutlet weak var computerScoreLable: UILabel!
+    @IBOutlet weak var chooseColumn: UIStackView!
     
     @IBOutlet var tapGesture: UITapGestureRecognizer!
     
-    @IBOutlet weak var rock: UIButton!
-    
     @IBOutlet weak var coachingOverlay: ARCoachingOverlayView!
     
-    private let box = try! Experience.loadBox();
+    private let box = try! Experience.loadBox()
     
     private let system = GameSystem()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +44,6 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         arConfiguration.planeDetection = .horizontal
         arView.session.run(arConfiguration)
         presentCoachingOverlay()
-        promptInformation.isHidden = false
     }
     
     @IBAction func paperButtonAction(_ sender: Any) {
@@ -53,7 +51,6 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         chooseColumn.isHidden = true
         box.notifications.hide.post()
         box.notifications.paperUser.post()
-        box.actions.completeARound.onAction = actionCompleted(_:)
         let computerChoose = checkComputerDetermine()
         system.compare(playerChoose: .Paper, computerChoose: computerChoose)
     }
@@ -63,7 +60,6 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         chooseColumn.isHidden = true
         box.notifications.hide.post()
         box.notifications.scissorsUser.post()
-        box.actions.completeARound.onAction = actionCompleted(_:)
         let computerChoose = checkComputerDetermine()
         system.compare(playerChoose: .Scissor, computerChoose: computerChoose)
     }
@@ -73,7 +69,6 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         chooseColumn.isHidden = true
         box.notifications.hide.post()
         box.notifications.rockUser.post()
-        box.actions.completeARound.onAction = actionCompleted(_:)
         let computerChoose = checkComputerDetermine()
         system.compare(playerChoose: .Rock, computerChoose: computerChoose)
     }
@@ -89,7 +84,10 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
                                                           alignment: alignment)
                 
         guard let rayCast: ARRaycastResult = result.first
-        else { return }
+        else {
+            print("Failed to get the result of casting")
+            return
+        }
                 
         let anchor = AnchorEntity(world: rayCast.worldTransform)
         anchor.addChild(box)
@@ -97,21 +95,11 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         print("------------------")
         print(rayCast)
         
-        box.actions.completeARound.onAction = actionCompleted(_:)
         chooseColumn.isHidden = false
-        playerScoreLable.isHidden = false
-        delimiter.isHidden = false
-        computerScoreLable.isHidden = false
-        box.notifications.showQuestionMark.post()
+        scoreBar.isHidden = false
         tapGesture.isEnabled = false
-    }
-    
-    
-    func presentCoachingOverlay() {
-        UIApplication.shared.isIdleTimerDisabled = true
-        coachingOverlay.session = arView.session
-        coachingOverlay.delegate = self
-        coachingOverlay.goal = .horizontalPlane
+        box.actions.completeARound.onAction = prepareNextContent(_:)
+        box.notifications.showQuestionMark.post()
     }
     
     func checkComputerDetermine() -> GameGestures{
@@ -135,21 +123,19 @@ class ViewController: UIViewController, ARCoachingOverlayViewDelegate {
         computerScoreLable.text = String(system.computerScore)
     }
     
-    func prepareNextContent(){
+    func prepareNextContent(_ entity: Entity?){
         updataScoreDisplay()
         if system.haveWiner(){
             if system.isPlayerWin(){
                 box.notifications.playerWin.post()
             }
         }else{
+            box.notifications.showQuestionMark.post()
             chooseColumn.isHidden = false
         }
     }
     
-    func actionCompleted(_ entity: Entity?) {
-        prepareNextContent()
-        print("执行了完毕")
+    func hiddenPromptInformation() {
+        promptInformation.isHidden = true
     }
-    
-    
 }

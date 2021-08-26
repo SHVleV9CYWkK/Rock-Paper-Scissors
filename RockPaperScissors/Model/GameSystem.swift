@@ -9,8 +9,8 @@ import Foundation
 
 class GameSystem {
     private let computer = Computer()
-    var playerScore = 0
-    var computerScore = 0
+    private(set) var playerScore = 0
+    private(set) var computerScore = 0
 
     // Back to the front end of the computer choosing
     func getComputerChoose() -> GameGestures {
@@ -43,28 +43,22 @@ class GameSystem {
             case .Paper: break
             case .Rock:
                 playerScore += 1
-                computerScore -= 1
             case .Scissor:
-                playerScore -= 1
                 computerScore += 1
             }
         case .Rock:
             switch computerChoose {
             case .Paper:
-                playerScore -= 1
                 computerScore += 1
             case .Rock: break;
             case .Scissor:
                 playerScore += 1
-                computerScore -= 1
             }
         case .Scissor:
             switch computerChoose {
             case .Paper:
                 playerScore += 1
-                computerScore -= 1
             case .Rock:
-                playerScore -= 1
                 computerScore += 1
             case .Scissor: break
             }

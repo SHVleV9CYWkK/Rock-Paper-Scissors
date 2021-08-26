@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C49F75C26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F75B26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift */; };
 		4C549E8626CDE4AB00E29B1A /* GameGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C549E8526CDE4AB00E29B1A /* GameGestures.swift */; };
 		4C549E8826CDEB6B00E29B1A /* GameSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C549E8726CDEB6B00E29B1A /* GameSystem.swift */; };
 		4C80F2F526BA14B6006480E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80F2F426BA14B6006480E2 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C49F75B26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARCoachingOverlayViewDelegate.swift"; sourceTree = "<group>"; };
 		4C549E8526CDE4AB00E29B1A /* GameGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGestures.swift; sourceTree = "<group>"; };
 		4C549E8726CDEB6B00E29B1A /* GameSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSystem.swift; sourceTree = "<group>"; };
 		4C80F2F126BA14B6006480E2 /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 				4C8D7C2726C3DB9B007B2645 /* Model */,
 				4C80F2F426BA14B6006480E2 /* AppDelegate.swift */,
 				4C80F2F626BA14B6006480E2 /* ViewController.swift */,
+				4C49F75B26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift */,
 				4C80F2F826BA14B6006480E2 /* Experience.rcproject */,
 				4C80F2FA26BA14B6006480E2 /* Main.storyboard */,
 				4C80F2FD26BA14B7006480E2 /* Assets.xcassets */,
@@ -280,6 +283,7 @@
 				4C549E8826CDEB6B00E29B1A /* GameSystem.swift in Sources */,
 				4C80F2F726BA14B6006480E2 /* ViewController.swift in Sources */,
 				4C80F2F526BA14B6006480E2 /* AppDelegate.swift in Sources */,
+				4C49F75C26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift in Sources */,
 				4C80F2F926BA14B6006480E2 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiahui.bai.RockPaperScissors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -482,6 +487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiahui.bai.RockPaperScissors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

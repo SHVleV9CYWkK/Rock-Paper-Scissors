@@ -8,5 +8,15 @@
     "libraryIdentifier" : "3292c5e7a72237e5a018cfed681a00cf",
     "format" : "model",
     "displayName" : "neonWinner.usdz"
+  },
+  {
+    "libraryIdentifier" : "6c7deb5783b64097ff95e3ea545e681e",
+    "format" : "model",
+    "displayName" : "rock.usdz"
+  },
+  {
+    "libraryIdentifier" : "d828acaf9d2a2903efc52947a171e384",
+    "format" : "model",
+    "displayName" : "scissors.usdz"
   }
 ]
