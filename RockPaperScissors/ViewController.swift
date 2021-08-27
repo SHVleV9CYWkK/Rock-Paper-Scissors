@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     
     private let box = try! Experience.loadBox()
     
-    private let system = GameSystem()
+    private let system = GameSystem.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()

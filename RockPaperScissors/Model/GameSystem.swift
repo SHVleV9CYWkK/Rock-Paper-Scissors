@@ -11,7 +11,10 @@ class GameSystem {
     private let computer = Computer()
     private(set) var playerScore = 0
     private(set) var computerScore = 0
+    static let instance = GameSystem()
 
+    private init (){}
+    
     // Back to the front end of the computer choosing
     func getComputerChoose() -> GameGestures {
         return computer.selectOption()
