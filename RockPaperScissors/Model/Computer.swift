@@ -8,16 +8,16 @@
 import Foundation
 struct Computer {
     func selectOption() -> GameGestures {
-        let random = Int8(arc4random_uniform(3))
+        let random = arc4random_uniform(3)
         var result:GameGestures = .Rock
         switch random {
         case 2:
-            result =  .Rock
+            result = .Rock
         case 1:
             result = .Scissor
         case 0:
             result = .Paper
-        default: break;
+        default:break
         }
         return result
     }

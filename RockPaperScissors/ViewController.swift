@@ -129,13 +129,10 @@ class ViewController: UIViewController {
             if system.isPlayerWin(){
                 box.notifications.playerWin.post()
             }
+            //TODO: Show another game button
         }else{
             box.notifications.showQuestionMark.post()
             chooseColumn.isHidden = false
         }
-    }
-    
-    func showPromptInformation() {
-        promptInformation.isHidden = false
     }
 }
