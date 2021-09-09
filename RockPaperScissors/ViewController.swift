@@ -37,6 +37,8 @@ class ViewController: UIViewController {
     
     private let system = GameSystem.instance
     
+    private let feedback = UIImpactFeedbackGenerator(style: .light)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         promptInformation.isHidden = true
@@ -49,41 +51,36 @@ class ViewController: UIViewController {
             arConfiguration.frameSemantics = semantics;
         }
         
-        //Object occlusion
+        // Object occlusion
         arView.environment.sceneUnderstanding.options.insert(.occlusion)
         
         arView.session.run(arConfiguration)
         presentCoachingOverlay()
     }
     
-    @IBAction func paperButtonAction(_ sender: Any) {
-        print("Player: Paper")
+    @IBAction func chooseGestureAction(_ sender: UIButton) {
+        feedback.impactOccurred()
+        switch sender.restorationIdentifier{
+            case "scissorButton":
+                print("Player: Scissor")
+                box.notifications.hide.post()
+                box.notifications.scissorsUser.post()
+            case "rockButton":
+                print("Player: Rock")
+                box.notifications.hide.post()
+                box.notifications.rockUser.post()
+            case "paperButton":
+                print("Player: Paper")
+                box.notifications.hide.post()
+                box.notifications.scissorsUser.post()
+            default: return
+        }
         chooseColumn.isHidden = true
-        box.notifications.hide.post()
-        box.notifications.paperUser.post()
-        let computerChoose = checkComputerDetermine()
-        system.compare(playerChoose: .Paper, computerChoose: computerChoose)
-    }
-    
-    @IBAction func scissorButtonAction(_ sender: Any) {
-        print("Player: Scissor")
-        chooseColumn.isHidden = true
-        box.notifications.hide.post()
-        box.notifications.scissorsUser.post()
         let computerChoose = checkComputerDetermine()
         system.compare(playerChoose: .Scissor, computerChoose: computerChoose)
     }
     
-    @IBAction func rockButtonAction(_ sender: Any) {
-        print("Player: Rock")
-        chooseColumn.isHidden = true
-        box.notifications.hide.post()
-        box.notifications.rockUser.post()
-        let computerChoose = checkComputerDetermine()
-        system.compare(playerChoose: .Rock, computerChoose: computerChoose)
-    }
-    
-    @IBAction func onTap(_ sender: UITapGestureRecognizer) {
+    @IBAction func onTapToCastScenes(_ sender: UITapGestureRecognizer) {
         let tapLocation: CGPoint = sender.location(in: arView)
         let estimatedPlane: ARRaycastQuery.Target = .estimatedPlane
         let alignment: ARRaycastQuery.TargetAlignment = .horizontal
@@ -95,6 +92,7 @@ class ViewController: UIViewController {
         guard let rayCast: ARRaycastResult = result.first
         else {
             print("Failed to get the result of casting")
+            promptInformation.text = "Casting failed, please click again"
             return
         }
                 
@@ -113,7 +111,7 @@ class ViewController: UIViewController {
     }
     
     func checkComputerDetermine() -> GameGestures{
-        let computChoose =  system.getComputerChoose()
+        let computChoose = system.getComputerChoose()
         switch computChoose {
             case .Paper:
                 print("Computer: Paper\n")

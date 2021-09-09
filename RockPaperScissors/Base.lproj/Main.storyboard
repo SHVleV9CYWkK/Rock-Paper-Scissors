@@ -36,28 +36,28 @@
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="DYA-Fs-1ZU">
                                 <rect key="frame" x="16" y="678" width="397" height="186"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk9-aW-YJ2">
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="scissorButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk9-aW-YJ2">
                                         <rect key="frame" x="0.0" y="0.0" width="54" height="186"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="✌️"/>
                                         <connections>
-                                            <action selector="scissorButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BKk-eu-fiB"/>
+                                            <action selector="chooseGestureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jXN-M5-bpq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hg-P1-Pog">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" restorationIdentifier="rockButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hg-P1-Pog">
                                         <rect key="frame" x="145" y="0.0" width="107" height="186"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="✊"/>
                                         <connections>
-                                            <action selector="rockButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IOc-rr-goi"/>
+                                            <action selector="chooseGestureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aK5-jq-z9E"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiU-os-nQw">
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="paperButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiU-os-nQw">
                                         <rect key="frame" x="343" y="0.0" width="54" height="186"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="✋"/>
                                         <connections>
-                                            <action selector="paperButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cV-uE-S4g"/>
+                                            <action selector="chooseGestureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YVP-cc-NWC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -134,7 +134,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="wZv-XD-THZ">
                     <connections>
-                        <action selector="onTap:" destination="BYZ-38-t0r" id="003-VX-fCd"/>
+                        <action selector="onTapToCastScenes:" destination="BYZ-38-t0r" id="003-VX-fCd"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
