@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C223D4426EA12C1007E59FD /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C223D4226EA12C1007E59FD /* iPad.png */; };
+		4C223D4526EA12C1007E59FD /* iPhoen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C223D4326EA12C1007E59FD /* iPhoen.png */; };
 		4C49F75C26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F75B26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift */; };
 		4C549E8626CDE4AB00E29B1A /* GameGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C549E8526CDE4AB00E29B1A /* GameGestures.swift */; };
 		4C549E8826CDEB6B00E29B1A /* GameSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C549E8726CDEB6B00E29B1A /* GameSystem.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C223D4226EA12C1007E59FD /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad.png; sourceTree = "<group>"; };
+		4C223D4326EA12C1007E59FD /* iPhoen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoen.png; sourceTree = "<group>"; };
 		4C49F75B26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARCoachingOverlayViewDelegate.swift"; sourceTree = "<group>"; };
 		4C549E8526CDE4AB00E29B1A /* GameGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGestures.swift; sourceTree = "<group>"; };
 		4C549E8726CDEB6B00E29B1A /* GameSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSystem.swift; sourceTree = "<group>"; };
@@ -84,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C223D3D26EA0B22007E59FD /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4C223D4226EA12C1007E59FD /* iPad.png */,
+				4C223D4326EA12C1007E59FD /* iPhoen.png */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
 		4C80F2E826BA14B6006480E2 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +129,7 @@
 				4C80F2FD26BA14B7006480E2 /* Assets.xcassets */,
 				4C80F2FF26BA14B7006480E2 /* LaunchScreen.storyboard */,
 				4C80F30226BA14B7006480E2 /* Info.plist */,
+				4C223D3D26EA0B22007E59FD /* Launch Screen */,
 			);
 			path = RockPaperScissors;
 			sourceTree = "<group>";
@@ -251,7 +265,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C223D4526EA12C1007E59FD /* iPhoen.png in Resources */,
 				4C80F30126BA14B7006480E2 /* LaunchScreen.storyboard in Resources */,
+				4C223D4426EA12C1007E59FD /* iPad.png in Resources */,
 				4C80F2FE26BA14B7006480E2 /* Assets.xcassets in Resources */,
 				4C80F2FC26BA14B6006480E2 /* Main.storyboard in Resources */,
 			);
@@ -467,7 +483,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiahui.bai.RockPaperScissors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -487,7 +503,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiahui.bai.RockPaperScissors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
