@@ -42,6 +42,16 @@ class ViewController: UIViewController {
         promptInformation.isHidden = true
         let arConfiguration = ARWorldTrackingConfiguration()
         arConfiguration.planeDetection = .horizontal
+        
+        // People occlusion
+        let semantics: ARConfiguration.FrameSemantics = [.personSegmentationWithDepth]
+        if type(of: arConfiguration).supportsFrameSemantics(semantics){
+            arConfiguration.frameSemantics = semantics;
+        }
+        
+        //Object occlusion
+        arView.environment.sceneUnderstanding.options.insert(.occlusion)
+        
         arView.session.run(arConfiguration)
         presentCoachingOverlay()
     }
