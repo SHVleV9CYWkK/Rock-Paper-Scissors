@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     
     private let system = GameSystem.instance
     
-    private let feedback = UIImpactFeedbackGenerator(style: .light)
+    private let feedback = UIImpactFeedbackGenerator(style: .rigid)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,24 +60,27 @@ class ViewController: UIViewController {
     
     @IBAction func chooseGestureAction(_ sender: UIButton) {
         feedback.impactOccurred()
+        let playerChoose:GameGestures
         switch sender.restorationIdentifier{
             case "scissorButton":
                 print("Player: Scissor")
+                playerChoose = .Scissor
                 box.notifications.hide.post()
                 box.notifications.scissorsUser.post()
             case "rockButton":
                 print("Player: Rock")
+                playerChoose = .Rock
                 box.notifications.hide.post()
                 box.notifications.rockUser.post()
             case "paperButton":
                 print("Player: Paper")
+                playerChoose = .Paper
                 box.notifications.hide.post()
-                box.notifications.scissorsUser.post()
+                box.notifications.paperUser.post()
             default: return
         }
         chooseColumn.isHidden = true
-        let computerChoose = checkComputerDetermine()
-        system.compare(playerChoose: .Scissor, computerChoose: computerChoose)
+        system.compare(playerChoose: playerChoose, computerChoose: checkComputerDetermine())
     }
     
     @IBAction func onTapToCastScenes(_ sender: UITapGestureRecognizer) {
