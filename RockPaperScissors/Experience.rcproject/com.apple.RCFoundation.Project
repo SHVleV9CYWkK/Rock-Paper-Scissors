@@ -31,6 +31,53 @@
                                     {
                                       "configurationBox" : {
                                         "configuration" : {
+                                          "angularCoefficient" : 1,
+                                          "animationStyle" : "basic",
+                                          "buildOutAnimationType" : "none",
+                                          "distance" : 1,
+                                          "duration" : 0,
+                                          "fadeOut" : true,
+                                          "linearCoefficient" : 1,
+                                          "moveEase" : "easeInOut",
+                                          "respectPhysics" : false,
+                                          "target" : [
+                                            "F0E1D9E8-71C7-4257-8170-E93410D6DACA",
+                                            "C3150CF5-7606-4618-8933-F06087F9936F",
+                                            "54BC4AB9-BA64-4973-98D4-49B22D5B4DCD",
+                                            "5AE1B7F7-5E75-46A9-90D4-F4079BCD4F97",
+                                            "3DE2F1AF-E4FF-48CE-B714-8FA220E52D0E",
+                                            "597E3F59-3441-4F95-848B-15B6FB349820",
+                                            "BE9995E3-039B-4BF1-8FBE-CCAD49E067DE",
+                                            "B126AD77-E7F8-46D2-BA8F-6BB63268614D",
+                                            "BF885F29-3AA8-4F11-8FEC-6A1B967A17DF"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "type" : "hide"
+                                        }
+                                      },
+                                      "identifier" : "D0FFB168-D95B-4F8E-A639-C19510802C65",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "3AC07AE8-DE6A-4B9D-A7A2-BFFBBBD5C806",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
                                           "animationDuration" : 0,
                                           "direction" : [
                                             0,
@@ -185,6 +232,34 @@
                                     {
                                       "configurationBox" : {
                                         "configuration" : {
+                                          "duration" : 0.30000001192092896
+                                        },
+                                        "name" : {
+                                          "type" : "wait"
+                                        }
+                                      },
+                                      "identifier" : "30370B46-3E8B-4DF6-9DB8-F3FDF51DFDB9",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "AF7EF750-0130-4FF9-92BC-7FBADD85EC4B",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
                                           "angularCoefficient" : 1,
                                           "animationStyle" : "basic",
                                           "buildInAnimationType" : "none",
@@ -308,6 +383,34 @@
                         "__version" : 1
                       },
                       "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "duration" : 0.30000001192092896
+                                        },
+                                        "name" : {
+                                          "type" : "wait"
+                                        }
+                                      },
+                                      "identifier" : "F7704B3B-928A-4E26-A852-58E66144D172",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "59F41651-DA7F-45B8-9962-3D002EF3ECE1",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
                         {
                           "__content" : [
                             {
@@ -449,6 +552,34 @@
                                     {
                                       "configurationBox" : {
                                         "configuration" : {
+                                          "duration" : 0.30000001192092896
+                                        },
+                                        "name" : {
+                                          "type" : "wait"
+                                        }
+                                      },
+                                      "identifier" : "21C79FFB-4908-43E5-B577-89C5453C0CD6",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "7B70455E-CCF4-4022-AE03-755E50CCEE09",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
                                           "angularCoefficient" : 1,
                                           "animationStyle" : "basic",
                                           "buildInAnimationType" : "none",
@@ -581,6 +712,34 @@
                                     {
                                       "configurationBox" : {
                                         "configuration" : {
+                                          "duration" : 0.30000001192092896
+                                        },
+                                        "name" : {
+                                          "type" : "wait"
+                                        }
+                                      },
+                                      "identifier" : "037AABEC-0D34-4A40-A4C5-B8552418EC82",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "AA1BDA2B-7337-49C1-9C3A-80A11CD13916",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
                                           "angularCoefficient" : 1,
                                           "animationStyle" : "basic",
                                           "buildInAnimationType" : "none",
@@ -665,6 +824,34 @@
                                     {
                                       "configurationBox" : {
                                         "configuration" : {
+                                          "duration" : 0.30000001192092896
+                                        },
+                                        "name" : {
+                                          "type" : "wait"
+                                        }
+                                      },
+                                      "identifier" : "BEBFA2FC-2B65-4C0E-B47A-38ED13D4DC71",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "DAC09DEF-0BDB-48F4-AF2D-69F9F199E1CB",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
                                           "angularCoefficient" : 1,
                                           "animationStyle" : "basic",
                                           "buildInAnimationType" : "none",
@@ -740,6 +927,34 @@
                         "__version" : 1
                       },
                       "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "duration" : 0.30000001192092896
+                                        },
+                                        "name" : {
+                                          "type" : "wait"
+                                        }
+                                      },
+                                      "identifier" : "FA420F88-3D16-4F33-8CE9-3757225CC16C",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "1A58B421-EF7A-435B-9F0E-6B65EAEB6D15",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
                         {
                           "__content" : [
                             {
@@ -847,10 +1062,10 @@
                                             "F0E1D9E8-71C7-4257-8170-E93410D6DACA",
                                             "3DE2F1AF-E4FF-48CE-B714-8FA220E52D0E",
                                             "597E3F59-3441-4F95-848B-15B6FB349820",
-                                            "B126AD77-E7F8-46D2-BA8F-6BB63268614D",
-                                            "5AE1B7F7-5E75-46A9-90D4-F4079BCD4F97",
                                             "BE9995E3-039B-4BF1-8FBE-CCAD49E067DE",
-                                            "54BC4AB9-BA64-4973-98D4-49B22D5B4DCD"
+                                            "54BC4AB9-BA64-4973-98D4-49B22D5B4DCD",
+                                            "5AE1B7F7-5E75-46A9-90D4-F4079BCD4F97",
+                                            "B126AD77-E7F8-46D2-BA8F-6BB63268614D"
                                           ]
                                         },
                                         "name" : {
@@ -926,9 +1141,53 @@
                                         "configuration" : {
                                           "angularCoefficient" : 1,
                                           "animationStyle" : "basic",
+                                          "buildOutAnimationType" : "none",
+                                          "distance" : 1,
+                                          "duration" : 0,
+                                          "fadeOut" : true,
+                                          "linearCoefficient" : 1,
+                                          "moveEase" : "easeInOut",
+                                          "respectPhysics" : false,
+                                          "target" : [
+                                            "3DE2F1AF-E4FF-48CE-B714-8FA220E52D0E",
+                                            "BE9995E3-039B-4BF1-8FBE-CCAD49E067DE",
+                                            "597E3F59-3441-4F95-848B-15B6FB349820",
+                                            "C3150CF5-7606-4618-8933-F06087F9936F",
+                                            "54BC4AB9-BA64-4973-98D4-49B22D5B4DCD",
+                                            "F0E1D9E8-71C7-4257-8170-E93410D6DACA"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "type" : "hide"
+                                        }
+                                      },
+                                      "identifier" : "665196DC-68E0-4221-A078-7CB5D3C0D710",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "DA59E58D-D971-46D6-AA08-EFA976C68927",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "angularCoefficient" : 1,
+                                          "animationStyle" : "basic",
                                           "buildInAnimationType" : "move in from above",
                                           "distance" : 1,
-                                          "duration" : 1,
+                                          "duration" : 0.73000001907348633,
                                           "fadeIn" : true,
                                           "linearCoefficient" : 1,
                                           "moveEase" : "easeInOut",
@@ -943,39 +1202,6 @@
                                         }
                                       },
                                       "identifier" : "68D4F04E-44B5-4AA1-BFC5-0FD02FEC567E",
-                                      "isEnabled" : true
-                                    }
-                                  ],
-                                  "__version" : 1
-                                },
-                                {
-                                  "__content" : [
-                                    {
-                                      "configurationBox" : {
-                                        "configuration" : {
-                                          "angularCoefficient" : 1,
-                                          "animationStyle" : "basic",
-                                          "buildOutAnimationType" : "none",
-                                          "distance" : 1,
-                                          "duration" : 1,
-                                          "fadeOut" : true,
-                                          "linearCoefficient" : 1,
-                                          "moveEase" : "easeInOut",
-                                          "respectPhysics" : false,
-                                          "target" : [
-                                            "C3150CF5-7606-4618-8933-F06087F9936F",
-                                            "597E3F59-3441-4F95-848B-15B6FB349820",
-                                            "3DE2F1AF-E4FF-48CE-B714-8FA220E52D0E",
-                                            "F0E1D9E8-71C7-4257-8170-E93410D6DACA",
-                                            "54BC4AB9-BA64-4973-98D4-49B22D5B4DCD",
-                                            "BE9995E3-039B-4BF1-8FBE-CCAD49E067DE"
-                                          ]
-                                        },
-                                        "name" : {
-                                          "type" : "hide"
-                                        }
-                                      },
-                                      "identifier" : "54161512-6A98-44E3-B98B-50B912FA7E37",
                                       "isEnabled" : true
                                     }
                                   ],
@@ -1044,91 +1270,6 @@
                                         "configuration" : {
                                           "angularCoefficient" : 1,
                                           "animationStyle" : "basic",
-                                          "buildOutAnimationType" : "move out to above",
-                                          "distance" : 1,
-                                          "duration" : 1,
-                                          "fadeOut" : true,
-                                          "linearCoefficient" : 1,
-                                          "moveEase" : "easeInOut",
-                                          "respectPhysics" : false,
-                                          "target" : [
-                                            "B126AD77-E7F8-46D2-BA8F-6BB63268614D",
-                                            "5AE1B7F7-5E75-46A9-90D4-F4079BCD4F97"
-                                          ]
-                                        },
-                                        "name" : {
-                                          "type" : "hide"
-                                        }
-                                      },
-                                      "identifier" : "413D26D9-0DDE-42FC-9EA2-25D6B0AEF03D",
-                                      "isEnabled" : true
-                                    }
-                                  ],
-                                  "__version" : 1
-                                }
-                              ],
-                              "identifier" : "53C1B616-CD88-4B63-8186-A4B5888C2018",
-                              "isEnabled" : true
-                            }
-                          ],
-                          "__version" : 1
-                        }
-                      ],
-                      "color" : [
-                        0.86274510622024536,
-                        0.3333333432674408,
-                        0.41568627953529358,
-                        1
-                      ],
-                      "identifier" : "F8F7F4F9-2731-4CB8-AC69-87FCAEDE5838",
-                      "isEnabled" : true,
-                      "isLooping" : false,
-                      "isModal" : false,
-                      "name" : "HiddenQuestionMark",
-                      "triggers" : [
-                        {
-                          "__content" : [
-                            {
-                              "configurationBox" : {
-                                "configuration" : {
-                                  "userIdentifier" : "HiddenQuestionMark"
-                                },
-                                "name" : "custom"
-                              },
-                              "identifier" : "604C6EF6-7EAA-4271-BE1F-AC2DB4434D68",
-                              "isEnabled" : true
-                            }
-                          ],
-                          "__version" : 1
-                        }
-                      ]
-                    }
-                  ],
-                  "__version" : 3
-                },
-                {
-                  "__content" : [
-                    {
-                      "accessibility" : {
-                        "__content" : [
-                          {
-                            "isEnabled" : false
-                          }
-                        ],
-                        "__version" : 1
-                      },
-                      "actionGroups" : [
-                        {
-                          "__content" : [
-                            {
-                              "configurations" : [
-                                {
-                                  "__content" : [
-                                    {
-                                      "configurationBox" : {
-                                        "configuration" : {
-                                          "angularCoefficient" : 1,
-                                          "animationStyle" : "basic",
                                           "buildInAnimationType" : "none",
                                           "distance" : 1,
                                           "duration" : 0,
@@ -1156,12 +1297,12 @@
                                       "configurationBox" : {
                                         "configuration" : {
                                           "angularCoefficient" : 1,
-                                          "duration" : 5,
+                                          "duration" : 3,
                                           "isTransformInitKeyPath" : true,
                                           "linearCoefficient" : 1,
                                           "location" : [
                                             0,
-                                            0.47852364182472229,
+                                            0.20000000298023224,
                                             1.3688006106349349e-07
                                           ],
                                           "moveEase" : "easeInOut",
@@ -1507,7 +1648,7 @@
                           "material",
                           {
                             "typeName" : "String",
-                            "value" : "paintEnamelMatte"
+                            "value" : "steel"
                           }
                         ],
                         [
@@ -1632,7 +1773,7 @@
                           "font",
                           {
                             "typeName" : "String",
-                            "value" : "SFProDisplay-Regular"
+                            "value" : "ArialMT"
                           }
                         ],
                         [
@@ -1660,7 +1801,7 @@
                           "material",
                           {
                             "typeName" : "String",
-                            "value" : "paintEnamelMatte"
+                            "value" : "steel"
                           }
                         ],
                         [
@@ -2190,7 +2331,7 @@
                         0.15143191814422607,
                         0,
                         0,
-                        1.4819388389587402,
+                        0.80000001192092896,
                         0,
                         1
                       ]
@@ -2359,7 +2500,7 @@
                           "material",
                           {
                             "typeName" : "String",
-                            "value" : "paintEnamelMatte"
+                            "value" : "steel"
                           }
                         ],
                         [
@@ -2468,21 +2609,21 @@
               "title" : "Box",
               "viewTransform" : {
                 "cameraTransform" : [
-                  0.64688277244567871,
-                  -7.4505805969238281e-08,
-                  -0.76258939504623413,
+                  -0.46578356623649597,
+                  -1.9371509552001953e-07,
+                  -0.8848986029624939,
                   0,
-                  -0.39111298322677612,
-                  0.85846316814422607,
-                  -0.33177027106285095,
+                  -0.42722734808921814,
+                  0.87573182582855225,
+                  0.22487890720367432,
                   0,
-                  0.65465503931045532,
-                  0.51287490129470825,
-                  0.55532509088516235,
+                  0.77493405342102051,
+                  0.48279774188995361,
+                  -0.40790125727653503,
                   0,
-                  1.9277111291885376,
-                  1.3050253391265869,
-                  1.365331768989563,
+                  2.3218271732330322,
+                  1.2863767147064209,
+                  -1.239155650138855,
                   1
                 ],
                 "sceneTransform" : [

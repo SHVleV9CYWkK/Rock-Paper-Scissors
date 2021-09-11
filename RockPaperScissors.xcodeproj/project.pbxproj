@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C223D4426EA12C1007E59FD /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C223D4226EA12C1007E59FD /* iPad.png */; };
-		4C223D4526EA12C1007E59FD /* iPhoen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C223D4326EA12C1007E59FD /* iPhoen.png */; };
+		4C36BBB926ECD1F2006058B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C36BBB726ECD1F2006058B8 /* LaunchScreen.storyboard */; };
+		4C36BBC126ECD6DE006058B8 /* Launch Screen in Resources */ = {isa = PBXBuildFile; fileRef = 4C36BBC026ECD6DE006058B8 /* Launch Screen */; };
 		4C49F75C26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49F75B26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift */; };
 		4C549E8626CDE4AB00E29B1A /* GameGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C549E8526CDE4AB00E29B1A /* GameGestures.swift */; };
 		4C549E8826CDEB6B00E29B1A /* GameSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C549E8726CDEB6B00E29B1A /* GameSystem.swift */; };
@@ -17,7 +17,6 @@
 		4C80F2F926BA14B6006480E2 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4C80F2F826BA14B6006480E2 /* Experience.rcproject */; };
 		4C80F2FC26BA14B6006480E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C80F2FA26BA14B6006480E2 /* Main.storyboard */; };
 		4C80F2FE26BA14B7006480E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C80F2FD26BA14B7006480E2 /* Assets.xcassets */; };
-		4C80F30126BA14B7006480E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C80F2FF26BA14B7006480E2 /* LaunchScreen.storyboard */; };
 		4C80F30C26BA14B7006480E2 /* RockPaperScissorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80F30B26BA14B7006480E2 /* RockPaperScissorsTests.swift */; };
 		4C80F31726BA14B7006480E2 /* RockPaperScissorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80F31626BA14B7006480E2 /* RockPaperScissorsUITests.swift */; };
 		4C8D7C2B26C3DF8B007B2645 /* Computer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D7C2A26C3DF8B007B2645 /* Computer.swift */; };
@@ -41,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C223D4226EA12C1007E59FD /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad.png; sourceTree = "<group>"; };
-		4C223D4326EA12C1007E59FD /* iPhoen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoen.png; sourceTree = "<group>"; };
+		4C36BBB826ECD1F2006058B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C36BBC026ECD6DE006058B8 /* Launch Screen */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Launch Screen"; sourceTree = "<group>"; };
 		4C49F75B26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARCoachingOverlayViewDelegate.swift"; sourceTree = "<group>"; };
 		4C549E8526CDE4AB00E29B1A /* GameGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGestures.swift; sourceTree = "<group>"; };
 		4C549E8726CDEB6B00E29B1A /* GameSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSystem.swift; sourceTree = "<group>"; };
@@ -52,7 +51,6 @@
 		4C80F2F826BA14B6006480E2 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		4C80F2FB26BA14B6006480E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C80F2FD26BA14B7006480E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4C80F30026BA14B7006480E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C80F30226BA14B7006480E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C80F30726BA14B7006480E2 /* RockPaperScissorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockPaperScissorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C80F30B26BA14B7006480E2 /* RockPaperScissorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsTests.swift; sourceTree = "<group>"; };
@@ -88,15 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C223D3D26EA0B22007E59FD /* Launch Screen */ = {
-			isa = PBXGroup;
-			children = (
-				4C223D4226EA12C1007E59FD /* iPad.png */,
-				4C223D4326EA12C1007E59FD /* iPhoen.png */,
-			);
-			path = "Launch Screen";
-			sourceTree = "<group>";
-		};
 		4C80F2E826BA14B6006480E2 = {
 			isa = PBXGroup;
 			children = (
@@ -126,10 +115,10 @@
 				4C49F75B26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift */,
 				4C80F2F826BA14B6006480E2 /* Experience.rcproject */,
 				4C80F2FA26BA14B6006480E2 /* Main.storyboard */,
+				4C36BBB726ECD1F2006058B8 /* LaunchScreen.storyboard */,
+				4C36BBC026ECD6DE006058B8 /* Launch Screen */,
 				4C80F2FD26BA14B7006480E2 /* Assets.xcassets */,
-				4C80F2FF26BA14B7006480E2 /* LaunchScreen.storyboard */,
 				4C80F30226BA14B7006480E2 /* Info.plist */,
-				4C223D3D26EA0B22007E59FD /* Launch Screen */,
 			);
 			path = RockPaperScissors;
 			sourceTree = "<group>";
@@ -265,10 +254,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C223D4526EA12C1007E59FD /* iPhoen.png in Resources */,
-				4C80F30126BA14B7006480E2 /* LaunchScreen.storyboard in Resources */,
-				4C223D4426EA12C1007E59FD /* iPad.png in Resources */,
+				4C36BBC126ECD6DE006058B8 /* Launch Screen in Resources */,
 				4C80F2FE26BA14B7006480E2 /* Assets.xcassets in Resources */,
+				4C36BBB926ECD1F2006058B8 /* LaunchScreen.storyboard in Resources */,
 				4C80F2FC26BA14B6006480E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,20 +324,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4C36BBB726ECD1F2006058B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C36BBB826ECD1F2006058B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		4C80F2FA26BA14B6006480E2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4C80F2FB26BA14B6006480E2 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4C80F2FF26BA14B7006480E2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C80F30026BA14B7006480E2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -484,7 +472,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiahui.bai.RockPaperScissors;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiahui.bai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -504,7 +492,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiahui.bai.RockPaperScissors;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiahui.bai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

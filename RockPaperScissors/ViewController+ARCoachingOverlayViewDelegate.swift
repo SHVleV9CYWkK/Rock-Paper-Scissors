@@ -19,4 +19,8 @@ extension ViewController: ARCoachingOverlayViewDelegate {
     func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
         promptInformation.isHidden = false
     }
+    
+    func coachingOverlayViewWillActivate(_ coachingOverlayView: ARCoachingOverlayView){
+        promptInformation.isHidden = true
+    }
 }
