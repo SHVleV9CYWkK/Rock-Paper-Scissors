@@ -93,12 +93,23 @@
                                     <constraint firstItem="mjW-JY-xP6" firstAttribute="leading" secondItem="d0c-Zx-Niw" secondAttribute="trailing" constant="102" id="om4-cB-hBD"/>
                                 </constraints>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" restorationIdentifier="newRoundButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tra-0q-9SS">
+                                <rect key="frame" x="177" y="730" width="75" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="🔄"/>
+                                <connections>
+                                    <action selector="chooseGestureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1wi-nh-ppp"/>
+                                    <action selector="newRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMv-Gv-Vcn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ltg-ai-fAq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ltg-ai-fAq" firstAttribute="trailing" secondItem="Tra-0q-9SS" secondAttribute="trailing" constant="176" id="0jo-0h-Xl5"/>
                             <constraint firstItem="VMx-By-XDa" firstAttribute="top" secondItem="krg-wm-gP5" secondAttribute="bottom" constant="38" id="16r-Cr-f7Q"/>
                             <constraint firstItem="ltg-ai-fAq" firstAttribute="trailing" secondItem="VMx-By-XDa" secondAttribute="trailing" constant="44" id="3x3-LM-aZM"/>
+                            <constraint firstItem="Tra-0q-9SS" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" constant="177" id="80n-9V-rQl"/>
                             <constraint firstAttribute="bottom" secondItem="ZNI-Dm-VT2" secondAttribute="bottom" id="8rE-jO-Pyj"/>
                             <constraint firstItem="XzC-Gu-gLs" firstAttribute="top" secondItem="jRA-kb-KOX" secondAttribute="top" id="9iD-YQ-DCc"/>
                             <constraint firstItem="XzC-Gu-gLs" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" id="A9q-sh-NsK"/>
@@ -115,6 +126,7 @@
                             <constraint firstItem="ZNI-Dm-VT2" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" id="nuq-In-cL7"/>
                             <constraint firstAttribute="bottom" secondItem="XzC-Gu-gLs" secondAttribute="bottom" id="pdn-by-6z1"/>
                             <constraint firstItem="XzC-Gu-gLs" firstAttribute="trailing" secondItem="ltg-ai-fAq" secondAttribute="trailing" id="sCB-jC-0Jx"/>
+                            <constraint firstItem="Tra-0q-9SS" firstAttribute="top" secondItem="VMx-By-XDa" secondAttribute="bottom" constant="571.66999999999996" id="tGb-Un-x9L"/>
                         </constraints>
                     </view>
                     <connections>
@@ -122,6 +134,7 @@
                         <outlet property="chooseColumn" destination="DYA-Fs-1ZU" id="RdJ-H1-MOp"/>
                         <outlet property="coachingOverlay" destination="ZNI-Dm-VT2" id="sr2-AJ-954"/>
                         <outlet property="computerScoreLable" destination="uee-hq-dIG" id="h4T-TN-N8t"/>
+                        <outlet property="newRoundButton" destination="Tra-0q-9SS" id="Ifw-mW-LKp"/>
                         <outlet property="paper" destination="eiU-os-nQw" id="zuA-mx-EC7"/>
                         <outlet property="playerScoreLable" destination="d0c-Zx-Niw" id="E6I-AU-gAn"/>
                         <outlet property="promptInformation" destination="VMx-By-XDa" id="s80-32-4LT"/>
@@ -138,7 +151,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="132.58928571428572"/>
+            <point key="canvasLocation" x="135.98130841121494" y="132.18142548596114"/>
         </scene>
     </scenes>
     <resources>

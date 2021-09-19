@@ -319,7 +319,7 @@
                                           "target" : [
 
                                           ],
-                                          "userIdentifier" : "Complete a round"
+                                          "userIdentifier" : "Complete once"
                                         },
                                         "name" : {
                                           "type" : "custom"
@@ -479,7 +479,7 @@
                                           "target" : [
 
                                           ],
-                                          "userIdentifier" : "Complete a round"
+                                          "userIdentifier" : "Complete once"
                                         },
                                         "name" : {
                                           "type" : "custom"
@@ -639,7 +639,7 @@
                                           "target" : [
 
                                           ],
-                                          "userIdentifier" : "Complete a round"
+                                          "userIdentifier" : "Complete once"
                                         },
                                         "name" : {
                                           "type" : "custom"
@@ -1065,7 +1065,8 @@
                                             "BE9995E3-039B-4BF1-8FBE-CCAD49E067DE",
                                             "54BC4AB9-BA64-4973-98D4-49B22D5B4DCD",
                                             "5AE1B7F7-5E75-46A9-90D4-F4079BCD4F97",
-                                            "B126AD77-E7F8-46D2-BA8F-6BB63268614D"
+                                            "B126AD77-E7F8-46D2-BA8F-6BB63268614D",
+                                            "BF885F29-3AA8-4F11-8FEC-6A1B967A17DF"
                                           ]
                                         },
                                         "name" : {
@@ -1154,7 +1155,8 @@
                                             "597E3F59-3441-4F95-848B-15B6FB349820",
                                             "C3150CF5-7606-4618-8933-F06087F9936F",
                                             "54BC4AB9-BA64-4973-98D4-49B22D5B4DCD",
-                                            "F0E1D9E8-71C7-4257-8170-E93410D6DACA"
+                                            "F0E1D9E8-71C7-4257-8170-E93410D6DACA",
+                                            "BF885F29-3AA8-4F11-8FEC-6A1B967A17DF"
                                           ]
                                         },
                                         "name" : {

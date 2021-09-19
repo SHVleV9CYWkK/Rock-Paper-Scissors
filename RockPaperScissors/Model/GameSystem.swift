@@ -68,4 +68,9 @@ class GameSystem {
         }
     }
     
+    func clearScore(){
+        self.playerScore = 0
+        self.computerScore = 0
+    }
+    
 }

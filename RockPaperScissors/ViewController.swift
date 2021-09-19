@@ -27,6 +27,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var paper: UIButton!
     
+    @IBOutlet weak var newRoundButton: UIButton!
+    
     @IBOutlet weak var chooseColumn: UIStackView!
     
     @IBOutlet var tapGesture: UITapGestureRecognizer!
@@ -83,6 +85,15 @@ class ViewController: UIViewController {
         system.compare(playerChoose: playerChoose, computerChoose: checkComputerDetermine())
     }
     
+    @IBAction func newRound(_ sender: UIButton) {
+        feedback.impactOccurred()
+        self.newRoundButton.isHidden = true
+        self.promptInformation.isHidden = true
+        system.clearScore()
+        updataScoreDisplay()
+        startChoose()
+    }
+    
     @IBAction func onTapToCastScenes(_ sender: UITapGestureRecognizer) {
         let tapLocation: CGPoint = sender.location(in: arView)
         let estimatedPlane: ARRaycastQuery.Target = .estimatedPlane
@@ -109,7 +120,7 @@ class ViewController: UIViewController {
         scoreBar.isHidden = false
         tapGesture.isEnabled = false
         promptInformation.isHidden = true
-        box.actions.completeARound.onAction = prepareNextContent(_:)
+        box.actions.completeOnce.onAction = prepareNextContent(_:)
         box.notifications.showQuestionMark.post()
     }
     
@@ -140,10 +151,16 @@ class ViewController: UIViewController {
             if system.isPlayerWin(){
                 box.notifications.playerWin.post()
             }
-            //TODO: Show another game button
+            self.promptInformation.text = "Click the button to start a new round"
+            self.promptInformation.isHidden = false
+            self.newRoundButton.isHidden = false
         }else{
-            box.notifications.showQuestionMark.post()
-            chooseColumn.isHidden = false
+            startChoose()
         }
+    }
+    
+    func startChoose(){
+        box.notifications.showQuestionMark.post()
+        chooseColumn.isHidden = false
     }
 }
