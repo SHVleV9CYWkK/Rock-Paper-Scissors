@@ -15,7 +15,14 @@ struct MainMenuView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                
+                Button(action: {}){
+                    ButtonImageView(image: "solo")
+                }
+                .offset(x: 0, y: -50)
+                Button(action: {}){
+                    ButtonImageView(image: "duo")
+                }
+                .offset(x: 0, y: 50)
             }
         }
     }
