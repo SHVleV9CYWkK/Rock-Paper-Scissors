@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainMenuView: View {
+    let feedback = UIImpactFeedbackGenerator(style: .rigid)
+    @State private var tempAlert = false
     var body: some View {
         ZStack {
             Image("background")
@@ -15,12 +17,22 @@ struct MainMenuView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                Button(action: {}){
+                Button(action: {
+                    feedback.impactOccurred()
+                }){
                     ButtonImageView(image: "solo")
                 }
                 .offset(x: 0, y: -50)
-                Button(action: {}){
+                
+                //Duo Button
+                Button(action: {
+                    feedback.impactOccurred()
+                    self.tempAlert = true
+                }){
                     ButtonImageView(image: "duo")
+                }
+                .alert(isPresented: $tempAlert) {
+                    Alert(title: Text("Prompt"), message: Text("The multiplayer game is currently not completed, so stay tuned!"), dismissButton: .default(Text("OK")))
                 }
                 .offset(x: 0, y: 50)
             }
