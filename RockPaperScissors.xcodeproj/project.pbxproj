@@ -46,6 +46,7 @@
 		4C36BBB826ECD1F2006058B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C36BBC026ECD6DE006058B8 /* Launch Screen */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Launch Screen"; sourceTree = "<group>"; };
 		4C49F75B26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARCoachingOverlayViewDelegate.swift"; sourceTree = "<group>"; };
+		4C49F93F270067A000B25054 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		4C549E8526CDE4AB00E29B1A /* GameGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGestures.swift; sourceTree = "<group>"; };
 		4C549E8726CDEB6B00E29B1A /* GameSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSystem.swift; sourceTree = "<group>"; };
 		4C636EED26F9B7AB006CB688 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
@@ -344,6 +345,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4C80F2FB26BA14B6006480E2 /* Base */,
+				4C49F93F270067A000B25054 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -480,7 +482,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiahui.bai;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockpaperscissors.jiahui.bai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,7 +502,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiahui.bai;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockpaperscissors.jiahui.bai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

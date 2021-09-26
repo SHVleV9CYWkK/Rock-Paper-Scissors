@@ -1,5 +1,5 @@
 //
-//  buttonView.swift
+//  ButtonImageView.swift
 //  RockPaperScissors
 //
 //  Created by Huey Bai on 22/9/21.
@@ -13,7 +13,7 @@ struct ButtonImageView: View {
         Image(image)
             .clipShape(Circle())
             .shadow(radius: 10)
-            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: 150, maxWidth: 50, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxHeight: 150, alignment: .center)
+            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: 100, maxWidth: 150, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 100, maxHeight: 150, alignment: .center)
             .scaleEffect(0.5)
     }
     

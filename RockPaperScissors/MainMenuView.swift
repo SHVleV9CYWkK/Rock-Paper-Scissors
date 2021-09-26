@@ -10,6 +10,7 @@ import SwiftUI
 struct MainMenuView: View {
     let feedback = UIImpactFeedbackGenerator(style: .rigid)
     @State private var tempAlert = false
+    @State private var isDisplayArView = false
     var body: some View {
         ZStack {
             Image("background")
@@ -17,12 +18,15 @@ struct MainMenuView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             VStack {
+                //Solo Button
                 Button(action: {
                     feedback.impactOccurred()
+                    self.isDisplayArView = true
                 }){
                     ButtonImageView(image: "solo")
-                }
-                .offset(x: 0, y: -50)
+                }.sheet(isPresented: self.$isDisplayArView) {
+                    ViewControllerRepresentation()
+                }.offset(x: 0, y: -50)
                 
                 //Duo Button
                 Button(action: {
@@ -33,8 +37,7 @@ struct MainMenuView: View {
                 }
                 .alert(isPresented: $tempAlert) {
                     Alert(title: Text("Prompt"), message: Text("The multiplayer game is currently not completed, so stay tuned!"), dismissButton: .default(Text("OK")))
-                }
-                .offset(x: 0, y: 50)
+                }.offset(x: 0, y: 50)
             }
         }
     }
@@ -44,4 +47,15 @@ struct MainMenuView_Previews: PreviewProvider {
     static var previews: some View {
         MainMenuView()
     }
+}
+
+struct ViewControllerRepresentation: UIViewControllerRepresentable {
+  typealias UIViewControllerType = ViewController
+    
+  func makeUIViewController(context: UIViewControllerRepresentableContext<ViewControllerRepresentation>) -> ViewControllerRepresentation.UIViewControllerType {
+//    return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "GameARView") as! ViewController
+      return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AR") as! ViewController
+}
+    
+  func updateUIViewController(_ uiViewController: ViewControllerRepresentation.UIViewControllerType, context: UIViewControllerRepresentableContext<ViewControllerRepresentation>) {}
 }
