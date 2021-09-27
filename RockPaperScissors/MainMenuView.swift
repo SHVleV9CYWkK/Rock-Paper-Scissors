@@ -18,14 +18,16 @@ struct MainMenuView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                //Solo Button
+//                Solo Button
                 Button(action: {
                     feedback.impactOccurred()
                     self.isDisplayArView = true
                 }){
                     ButtonImageView(image: "solo")
-                }.sheet(isPresented: self.$isDisplayArView) {
-                    ViewControllerRepresentation()
+                }.fullScreenCover(isPresented: self.$isDisplayArView) {
+                    ViewControllerRepresentation(isDispaly: $isDisplayArView)
+                        .frame(maxWidth: .infinity,maxHeight: .infinity)
+                        .ignoresSafeArea(edges: .all)
                 }.offset(x: 0, y: -50)
                 
                 //Duo Button
@@ -49,13 +51,3 @@ struct MainMenuView_Previews: PreviewProvider {
     }
 }
 
-struct ViewControllerRepresentation: UIViewControllerRepresentable {
-  typealias UIViewControllerType = ViewController
-    
-  func makeUIViewController(context: UIViewControllerRepresentableContext<ViewControllerRepresentation>) -> ViewControllerRepresentation.UIViewControllerType {
-//    return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "GameARView") as! ViewController
-      return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AR") as! ViewController
-}
-    
-  func updateUIViewController(_ uiViewController: ViewControllerRepresentation.UIViewControllerType, context: UIViewControllerRepresentableContext<ViewControllerRepresentation>) {}
-}

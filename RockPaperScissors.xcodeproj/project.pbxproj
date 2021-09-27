@@ -22,6 +22,7 @@
 		4C80F30C26BA14B7006480E2 /* RockPaperScissorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80F30B26BA14B7006480E2 /* RockPaperScissorsTests.swift */; };
 		4C80F31726BA14B7006480E2 /* RockPaperScissorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80F31626BA14B7006480E2 /* RockPaperScissorsUITests.swift */; };
 		4C8D7C2B26C3DF8B007B2645 /* Computer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D7C2A26C3DF8B007B2645 /* Computer.swift */; };
+		4CC0F55627015BB4009CF192 /* ViewControllerRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F55527015BB4009CF192 /* ViewControllerRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		4C80F31626BA14B7006480E2 /* RockPaperScissorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsUITests.swift; sourceTree = "<group>"; };
 		4C80F31826BA14B7006480E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8D7C2A26C3DF8B007B2645 /* Computer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Computer.swift; sourceTree = "<group>"; };
+		4CC0F55527015BB4009CF192 /* ViewControllerRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				4C80F2F426BA14B6006480E2 /* AppDelegate.swift */,
 				4C80F2F626BA14B6006480E2 /* ViewController.swift */,
 				4C49F75B26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift */,
+				4CC0F55527015BB4009CF192 /* ViewControllerRepresentation.swift */,
 				4C636EED26F9B7AB006CB688 /* MainMenuView.swift */,
 				4C0124B126FABCD300129FD0 /* ButtonImageView.swift */,
 				4C80F2FA26BA14B6006480E2 /* Main.storyboard */,
@@ -298,6 +301,7 @@
 				4C80F2F526BA14B6006480E2 /* AppDelegate.swift in Sources */,
 				4C49F75C26D7934700EA80CB /* ViewController+ARCoachingOverlayViewDelegate.swift in Sources */,
 				4C80F2F926BA14B6006480E2 /* Experience.rcproject in Sources */,
+				4CC0F55627015BB4009CF192 /* ViewControllerRepresentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

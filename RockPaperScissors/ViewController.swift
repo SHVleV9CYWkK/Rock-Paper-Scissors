@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var newRoundButton: UIButton!
     
+    @IBOutlet weak var backButton: UIButton!
+    
     @IBOutlet weak var chooseColumn: UIStackView!
     
     @IBOutlet var tapGesture: UITapGestureRecognizer!
@@ -40,6 +42,8 @@ class ViewController: UIViewController {
     private let system = GameSystem.instance
     
     private let feedback = UIImpactFeedbackGenerator(style: .rigid)
+    
+    public var isdisplay = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,6 +126,10 @@ class ViewController: UIViewController {
         promptInformation.isHidden = true
         box.actions.completeOnce.onAction = prepareNextContent(_:)
         box.notifications.showQuestionMark.post()
+    }
+    
+    @IBAction func backAction(_ sender: UIButton) {
+        self.isdisplay = false
     }
     
     func checkComputerDetermine() -> GameGestures{
