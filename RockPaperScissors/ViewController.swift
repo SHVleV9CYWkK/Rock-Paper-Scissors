@@ -43,8 +43,6 @@ class ViewController: UIViewController {
     
     private let feedback = UIImpactFeedbackGenerator(style: .rigid)
     
-    public var isdisplay = true
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         promptInformation.isHidden = true
@@ -129,7 +127,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func backAction(_ sender: UIButton) {
-        self.isdisplay = false
+        self.dismiss(animated: true, completion: nil)
     }
     
     func checkComputerDetermine() -> GameGestures{
