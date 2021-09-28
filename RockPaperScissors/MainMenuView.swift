@@ -25,7 +25,7 @@ struct MainMenuView: View {
                 }){
                     ButtonImageView(image: "solo")
                 }.fullScreenCover(isPresented: self.$isDisplayArView) {
-                    ViewControllerRepresentation()
+                    ViewControllerRepresentation(isPresented: $isDisplayArView)
                         .frame(maxWidth: .infinity,maxHeight: .infinity)
                         .ignoresSafeArea(edges: .all)
                 }.offset(x: 0, y: -50)

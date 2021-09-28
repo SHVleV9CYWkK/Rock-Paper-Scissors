@@ -34,13 +34,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qY-lc-qlq">
-                                <rect key="frame" x="15" y="40" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qY-lc-qlq">
+                                <rect key="frame" x="30" y="50" width="60" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jD5-6i-wES"/>
-                                </connections>
+                                <state key="normal" image="arrow.uturn.left" catalog="system"/>
                             </button>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="DYA-Fs-1ZU">
                                 <rect key="frame" x="16" y="640" width="344" height="72"/>
@@ -76,7 +74,7 @@
                                 </constraints>
                             </stackView>
                             <stackView hidden="YES" opaque="NO" contentMode="center" distribution="fillEqually" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="krg-wm-gP5">
-                                <rect key="frame" x="58" y="80" width="260" height="36"/>
+                                <rect key="frame" x="58" y="95" width="260" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0c-Zx-Niw">
                                         <rect key="frame" x="0.0" y="0.0" width="18.666666666666668" height="36"/>
@@ -121,22 +119,19 @@
                             <constraint firstItem="XzC-Gu-gLs" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" id="A9q-sh-NsK"/>
                             <constraint firstItem="ltg-ai-fAq" firstAttribute="trailing" secondItem="Tra-0q-9SS" secondAttribute="trailing" constant="159" id="JMX-e2-aTC"/>
                             <constraint firstItem="ZNI-Dm-VT2" firstAttribute="trailing" secondItem="ltg-ai-fAq" secondAttribute="trailing" id="Jyn-a1-GAb"/>
+                            <constraint firstItem="krg-wm-gP5" firstAttribute="top" secondItem="jRA-kb-KOX" secondAttribute="topMargin" constant="51" id="Kxr-Zc-CdZ"/>
                             <constraint firstItem="krg-wm-gP5" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" constant="58" id="MnT-Wm-g9g"/>
-                            <constraint firstItem="ltg-ai-fAq" firstAttribute="trailing" secondItem="4qY-lc-qlq" secondAttribute="trailing" constant="293" id="NjS-Tn-7Io"/>
                             <constraint firstItem="ltg-ai-fAq" firstAttribute="bottom" secondItem="DYA-Fs-1ZU" secondAttribute="bottom" constant="17" id="P0v-QE-PVX"/>
                             <constraint firstItem="ltg-ai-fAq" firstAttribute="trailing" secondItem="krg-wm-gP5" secondAttribute="trailing" constant="57" id="T9Q-R1-fDN"/>
-                            <constraint firstItem="4qY-lc-qlq" firstAttribute="top" secondItem="jRA-kb-KOX" secondAttribute="top" constant="40" id="WtC-Nm-P8P"/>
                             <constraint firstItem="ZNI-Dm-VT2" firstAttribute="top" secondItem="jRA-kb-KOX" secondAttribute="top" id="bGf-34-xty"/>
-                            <constraint firstItem="VMx-By-XDa" firstAttribute="top" secondItem="krg-wm-gP5" secondAttribute="bottom" constant="22" id="cdT-h6-lon"/>
+                            <constraint firstItem="VMx-By-XDa" firstAttribute="top" secondItem="krg-wm-gP5" secondAttribute="bottom" constant="7" id="dxy-3q-dPh"/>
                             <constraint firstItem="VMx-By-XDa" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" constant="43" id="eSU-dl-8Yy"/>
                             <constraint firstItem="DYA-Fs-1ZU" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" constant="16" id="hws-4O-cwV"/>
                             <constraint firstItem="ltg-ai-fAq" firstAttribute="trailing" secondItem="DYA-Fs-1ZU" secondAttribute="trailing" constant="15" id="kal-KG-S6E"/>
                             <constraint firstItem="ZNI-Dm-VT2" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" id="nuq-In-cL7"/>
                             <constraint firstItem="ltg-ai-fAq" firstAttribute="bottom" secondItem="Tra-0q-9SS" secondAttribute="bottom" constant="22" id="pPM-rV-B1d"/>
                             <constraint firstAttribute="bottom" secondItem="XzC-Gu-gLs" secondAttribute="bottom" id="pdn-by-6z1"/>
-                            <constraint firstItem="krg-wm-gP5" firstAttribute="top" secondItem="ltg-ai-fAq" secondAttribute="top" constant="36" id="raG-2A-qnX"/>
                             <constraint firstItem="XzC-Gu-gLs" firstAttribute="trailing" secondItem="ltg-ai-fAq" secondAttribute="trailing" id="sCB-jC-0Jx"/>
-                            <constraint firstItem="4qY-lc-qlq" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" constant="15" id="z3Y-yl-HXZ"/>
                             <constraint firstItem="Tra-0q-9SS" firstAttribute="leading" secondItem="ltg-ai-fAq" secondAttribute="leading" constant="162" id="zRF-7V-KuA"/>
                         </constraints>
                     </view>
@@ -165,10 +160,11 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="135.98130841121494" y="132.18142548596114"/>
+            <point key="canvasLocation" x="135.19999999999999" y="131.52709359605913"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.uturn.left" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

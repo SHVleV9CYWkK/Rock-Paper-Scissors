@@ -46,6 +46,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         promptInformation.isHidden = true
+        backButton.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.8)
+        backButton.tintColor = .lightGray
+        backButton.layer.cornerRadius = 10
+        
         let arConfiguration = ARWorldTrackingConfiguration()
         arConfiguration.planeDetection = .horizontal
         
@@ -58,8 +62,8 @@ class ViewController: UIViewController {
         // Object occlusion
         arView.environment.sceneUnderstanding.options.insert(.occlusion)
         
-        arView.session.run(arConfiguration)
         presentCoachingOverlay()
+        arView.session.run(arConfiguration)
     }
     
     @IBAction func chooseGestureAction(_ sender: UIButton) {
@@ -124,10 +128,6 @@ class ViewController: UIViewController {
         promptInformation.isHidden = true
         box.actions.completeOnce.onAction = prepareNextContent(_:)
         box.notifications.showQuestionMark.post()
-    }
-    
-    @IBAction func backAction(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
     }
     
     func checkComputerDetermine() -> GameGestures{
