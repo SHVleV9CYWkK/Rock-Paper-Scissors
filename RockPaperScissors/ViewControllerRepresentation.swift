@@ -17,10 +17,13 @@ struct ViewControllerRepresentation: UIViewControllerRepresentable {
     
     class Coordinator: NSObject{
         @Binding var isPresent: Bool
+        @Environment(\.presentationMode) var presentationMode
+        
         init(isPresented: Binding<Bool>) {
             self._isPresent = isPresented
         }
         @objc func isPresentedChanged(_ sender: ViewControllerRepresentation.UIViewControllerType){
+            presentationMode.wrappedValue.dismiss()
             self.isPresent = false
         }
     }

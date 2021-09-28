@@ -66,6 +66,11 @@ class ViewController: UIViewController {
         arView.session.run(arConfiguration)
     }
     
+    override func viewDidDisappear(_ animated: Bool){
+        super.viewDidDisappear(animated)
+        system.clearScore()
+    }
+    
     @IBAction func chooseGestureAction(_ sender: UIButton) {
         feedback.impactOccurred()
         let playerChoose:GameGestures
@@ -130,6 +135,13 @@ class ViewController: UIViewController {
         box.notifications.showQuestionMark.post()
     }
     
+    @IBAction func backAction(_ sender: UIButton) {
+        arView.session.pause()
+        arView.removeFromSuperview()
+        box.removeFromParent()
+        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
     func checkComputerDetermine() -> GameGestures{
         let computChoose = system.getComputerChoose()
         switch computChoose {

@@ -27,7 +27,7 @@ struct MainMenuView: View {
                 }.fullScreenCover(isPresented: self.$isDisplayArView) {
                     ViewControllerRepresentation(isPresented: $isDisplayArView)
                         .frame(maxWidth: .infinity,maxHeight: .infinity)
-                        .ignoresSafeArea(edges: .all)
+                        .ignoresSafeArea(edges: .all) 
                 }.offset(x: 0, y: -50)
                 
                 //Duo Button
