@@ -11,6 +11,7 @@ struct MainMenuView: View {
     let feedback = UIImpactFeedbackGenerator(style: .rigid)
     @State private var tempAlert = false
     @State private var isDisplayArView = false
+    
     var body: some View {
         ZStack {
             Image("background")
@@ -25,7 +26,7 @@ struct MainMenuView: View {
                 }){
                     ButtonImageView(image: "solo")
                 }.fullScreenCover(isPresented: self.$isDisplayArView) {
-                    ViewControllerRepresentation(isPresented: $isDisplayArView)
+                    ViewControllerRepresentation()
                         .frame(maxWidth: .infinity,maxHeight: .infinity)
                         .ignoresSafeArea(edges: .all) 
                 }.offset(x: 0, y: -50)

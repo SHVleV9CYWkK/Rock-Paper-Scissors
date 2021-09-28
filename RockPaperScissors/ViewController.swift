@@ -37,11 +37,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var coachingOverlay: ARCoachingOverlayView!
     
-    private let box = try! Experience.loadBox()
+    private var box = try! Experience.loadBox()
     
     private let system = GameSystem.instance
     
     private let feedback = UIImpactFeedbackGenerator(style: .rigid)
+    
+    deinit{
+        print("View 销毁")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +53,8 @@ class ViewController: UIViewController {
         backButton.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.8)
         backButton.tintColor = .lightGray
         backButton.layer.cornerRadius = 10
+        
+        presentCoachingOverlay()
         
         let arConfiguration = ARWorldTrackingConfiguration()
         arConfiguration.planeDetection = .horizontal
@@ -61,9 +67,8 @@ class ViewController: UIViewController {
         
         // Object occlusion
         arView.environment.sceneUnderstanding.options.insert(.occlusion)
-        
-        presentCoachingOverlay()
         arView.session.run(arConfiguration)
+        
     }
     
     override func viewDidDisappear(_ animated: Bool){
@@ -123,6 +128,8 @@ class ViewController: UIViewController {
                 
         let anchor = AnchorEntity(world: rayCast.worldTransform)
         anchor.addChild(box)
+        
+                
         arView.scene.anchors.append(anchor)
         print("------------------")
         print(rayCast)
@@ -136,12 +143,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func backAction(_ sender: UIButton) {
-        arView.session.pause()
-        arView.removeFromSuperview()
+        box.actions.completeOnce.onAction = {(_:Entity?) -> Swift.Void in return}
+        box.scene?.anchors.removeAll()
         box.removeFromParent()
+        arView.session.pause()
+        arView.scene.anchors.removeAll()
+        arView.removeFromSuperview()
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
+    
     func checkComputerDetermine() -> GameGestures{
         let computChoose = system.getComputerChoose()
         switch computChoose {
