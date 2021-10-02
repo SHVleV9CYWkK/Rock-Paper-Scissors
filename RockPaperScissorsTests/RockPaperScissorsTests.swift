@@ -29,5 +29,13 @@ class RockPaperScissorsTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func GameSystemHaveWinnerTest()  throws {
+        XCTAssertFalse(GameSystem.instance.haveWiner())
+    }
+    
+    func GameSystemIsPlayerWinTest() throws{
+        XCTAssertFalse(GameSystem.instance.isPlayerWin())
+    }
 
 }
