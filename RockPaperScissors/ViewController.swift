@@ -43,10 +43,6 @@ class ViewController: UIViewController {
     
     private let feedback = UIImpactFeedbackGenerator(style: .rigid)
     
-    deinit{
-        print("View 销毁")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         promptInformation.isHidden = true
