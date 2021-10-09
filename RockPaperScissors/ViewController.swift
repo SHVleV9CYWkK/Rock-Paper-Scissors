@@ -127,8 +127,6 @@ class ViewController: UIViewController {
         
                 
         arView.scene.anchors.append(anchor)
-        print("------------------")
-        print(rayCast)
         
         chooseColumn.isHidden = false
         scoreBar.isHidden = false
