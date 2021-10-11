@@ -37,5 +37,19 @@ class RockPaperScissorsTests: XCTestCase {
     func GameSystemIsPlayerWinTest() throws{
         XCTAssertFalse(GameSystem.instance.isPlayerWin())
     }
-
+    
+    func GameSystemCompareWinTest() throws{
+        GameSystem.instance.compare(playerChoose: .Paper, computerChoose: .Rock);
+        XCTAssertEqual(GameSystem.instance.playerScore, 1);
+    }
+    
+    func GameSystemCompareLoseTest() throws{
+        GameSystem.instance.compare(playerChoose: .Paper, computerChoose: .Scissor);
+        XCTAssertEqual(GameSystem.instance.computerScore, 1);
+    }
+    
+    func GameSystemClearScoreTest() throws{
+        GameSystem.instance.clearScore();
+        XCTAssertEqual(GameSystem.instance.computerScore, 0);
+    }
 }
